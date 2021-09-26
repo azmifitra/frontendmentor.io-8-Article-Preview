@@ -1,0 +1,229 @@
+/* ## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+### Body Copy
+
+- Font size: 13px */
+
+@font-face {
+    font-family: 'manrope-m';
+    src: url(Manrope-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'manrope-b';
+    src: url(Manrope-Bold.ttf);
+}
+
+html {
+    font-size: 13px;
+    font-family: 'manrope-m';
+    background-color: hsl(210, 46%, 95%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+.container {
+    width: 800px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    position: relative;
+}
+
+.container .image {
+    order: 1;
+    flex: 40%;
+    background-image: url(drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.container .main {
+    order: 2;
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .main .text {
+    order: 1;
+    flex: 70%;
+    border-top-right-radius: 20px;
+}
+
+.container .main .profile {
+    order: 2;
+    flex: 30%;
+    border-bottom-right-radius: 20px;
+}
+
+.container .main h1 {
+    font-size: 1.75em;
+    padding: 10px 50px 0px 30px;
+}
+
+.container .main article {
+    color: hsl(214, 17%, 51%);
+    padding: 0px 60px 0px 30px;
+}
+
+.container .profile {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.container .profile .ava {
+    order: 1;
+    flex: 17%;
+}
+
+.container .profile .name {
+    order: 2;
+    flex: 58%;
+}
+
+.container .profile .btn {
+    order: 3;
+    flex: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container .profile .ava {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container .profile img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+}
+
+.container .profile .name {
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.name #name {
+    font-family: 'manrope-b';
+    padding-top: 5px;
+}
+
+.name #date {
+    color:hsl(214, 17%, 51%);
+    line-height: 0%;
+}
+
+.container .profile button {
+    border-style: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container .profile .btn button #nonclick {
+    height: 15px;
+    width: 15px;
+    background-color:hsl(210, 46%, 95%);
+    padding: 5px;
+}
+
+.container .profile .btn button #click {
+    height: 15px;
+    width: 15px;
+    background-color:hsl(210, 46%, 95%);
+    padding: 5px;
+}
+
+.shareDesktop {
+    width: 250px;
+    height: 50px;
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 15px;
+    border-radius: 10px;
+    left: 615px;
+    top: 135px;
+    display: none;
+}
+
+.shareDesktop p {
+    display: inline;
+    letter-spacing: 5px;
+    padding-right: 15px;
+    color:hsl(214, 17%, 51%)
+}
+
+.shareDesktop img {
+    cursor: pointer;
+}
+
+.triangle {
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid hsl(217, 19%, 35%);
+    position: absolute;
+    left: 105px;
+    top: 50px; 
+}
+
+
+@media screen and (max-width:800px) {
+
+.container {
+    flex-direction: column;
+    height: 70vh;
+}
+
+.container .image {
+    border-radius: 15px 15px 0px 0px;
+}
+
+.container .main h1 {
+    font-size: 1.5em;
+}
+
+.container .main article {
+    font-size: 0.9em;
+}
+
+.ava {
+    padding-left: 30px;
+}
+
+.btn {
+    padding-right: 20px;
+}
+
+.shareDesktop {
+    display: none;
+    position:absolute;
+    width: 0px
+}
+
+
+
+}
